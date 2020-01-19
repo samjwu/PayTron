@@ -79,6 +79,46 @@ choosePort(HOST, DEFAULT_PORT)
       proxyConfig,
       urls.lanUrlForConfig
     );
+
+    var express = require('express')
+    var cors = require('cors')
+    var app = express()
+    
+    app.use(cors())
+
+    app.get('/products/:id', function (req, res, next) {
+      res.json({msg: 'This is CORS-enabled for all origins!'})
+    })
+     
+    app.listen(80, function () {
+      console.log('CORS-enabled web server listening on port 80')
+    })
+
+    // app.use(function (req, res, next) {
+
+    //       // Website you wish to allow to connect
+    //       res.setHeader('Access-Control-Allow-Origin', '*');
+      
+    //       // Request methods you wish to allow
+    //       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+      
+    //       // Request headers you wish to allow
+    //       res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+      
+    //       // Set to true if you need the website to include cookies in the requests sent
+    //       // to the API (e.g. in case you use sessions)
+    //       res.setHeader('Access-Control-Allow-Credentials', true);
+      
+    //       // Pass to next layer of middleware
+    //       next();
+    //   });
+
+    //   app.get('/', function (req, res) {
+
+    //     res.header("Access-Control-Allow-Origin", "*");
+    //     res.send('OPAQUE RESPONSE NO-CORS')
+    // })
+
     const devServer = new WebpackDevServer(compiler, serverConfig);
     // Launch WebpackDevServer.
     devServer.listen(port, HOST, err => {
