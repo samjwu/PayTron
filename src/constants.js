@@ -49,12 +49,4 @@ export const EXPLORER_URL = 'https://explorer.blockstack.org'
 
 export const OTHER_KINGDOMS = [
   //TODO: add other content creators
-  {
-    app: 'https://animal-kingdom-1.firebaseapp.com',
-    ruler: 'larry.id'
-  },
-  {
-    app: 'http://localhost:3001',
-    ruler: 'larz.id'
-  }
 ]
