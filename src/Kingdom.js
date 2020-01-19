@@ -146,8 +146,9 @@ class Kingdom extends Component {
             : <a
               className='btn btn-primary'
               href={`${window.location.origin}/user/${currentUsername}?add=${app}/user/${username}`}
-            >Support this User
-            </a>}
+            >Support this User <script src="https://gateway.gear.mycelium.com/gear-widget-host.js"></script><iframe id='gear-widget' scrolling='no' src="https://gateway.gear.mycelium.com/w/b64cd9008847f9efdc4ca5247cfd6a3e95d3fe629ac42418c38923e445acc678" style="border: none; display: inline-block; height: 130px; width: 350px;"></iframe>
+            </a>
+            }
             </p>
             <div className="container">
               {mine ?
