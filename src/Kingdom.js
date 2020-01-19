@@ -142,7 +142,7 @@ class Kingdom extends Component {
               <p>{username} is a user.</p>
             }
             <p>
-            {mine ? <Link className="btn btn-primary" to="/me" role="button">Edit my Content Creator Label</Link>
+            {mine ? <Link className="btn btn-primary" to="/me" role="button">Edit my Profile Label</Link>
             : <a
               className='btn btn-primary'
               href={`${window.location.origin}/user/${currentUsername}?add=${app}/user/${username}`}
