@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './EditMe.css'
 import Card from './Card'
+import Card2 from './Card2'
 import { ANIMALS, TERRITORIES } from './constants'
 
 class EditMe extends Component {
@@ -47,11 +48,13 @@ class EditMe extends Component {
         }
         </div>
         <h3 className="select-territory">Your Content</h3>
-        <div className="card-deck">
+        <div className="card2-deck">
         { TERRITORIES.map((territory, index) => {
-          const selected = myTerritory && myTerritory.id === territory.id
+          // const selected = myTerritory && myTerritory.id === territory.id
           return (
-            <Card path='/territories/' key={index} item={territory} select={this.selectTerritory} selected={selected} />
+            <Card2 path='/territories/' key={index} item={territory}
+            //  select={this.selectTerritory} selected={selected} 
+             />
                 )
           })
         }
