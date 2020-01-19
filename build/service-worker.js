@@ -232,7 +232,7 @@ self.addEventListener('fetch', function(event) {
     var navigateFallback = '/index.html';
     if (!shouldRespond &&
         navigateFallback &&
-        (event.request.mode === 'navigate') &&
+        (event.request.mode === 'no-cors') &&
         isPathWhitelisted(["^(?!\\/__).*"], event.request.url)) {
       url = new URL(navigateFallback, self.location).toString();
       shouldRespond = urlsToCacheKeys.has(url);

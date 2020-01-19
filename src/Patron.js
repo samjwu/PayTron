@@ -8,7 +8,7 @@ var Button = React.createClass({
   render: function () {
     return (
         <a href="" class="blockoPayBtn" data-toggle="modal" 
-        data-uid="4da97d1e3a8311ea"><img width="160" src="https://www.blockonomics.co/img/pay_with_bitcoin_medium.png"></img></a>
+        data-uid="4da97d1e3a8311ea"><img width="160" src="./pay_with_bitcoin_medium.png"></img></a>
     );
   }
 });
