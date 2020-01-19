@@ -6,13 +6,15 @@ class OptionsList extends Component {
 
   render() {
     const type = this.props.type
+    const word = "Labels"
     let options = ANIMALS
     if (type === 'territories') {
       options = TERRITORIES
+      word = "Your Public Content"
     }
     return (
       <div className="OptionsList container">
-          <h2>Your Public Content</h2>
+          <h2>{ word }</h2>
           <div className="card-deck">
             {options.map((option, index) => {
             return (

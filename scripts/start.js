@@ -80,19 +80,47 @@ choosePort(HOST, DEFAULT_PORT)
       urls.lanUrlForConfig
     );
 
-    var express = require('express')
-    var cors = require('cors')
-    var app = express()
-    
-    app.use(cors())
+    const express = require('express')
+    const debug = require("debug")("server");
 
-    app.get('/products/:id', function (req, res, next) {
-      res.json({msg: 'This is CORS-enabled for all origins!'})
-    })
+    const app = express();
+    // const port = process.env.SERVER_PORT || 3001;
+
+    app.use(function(req, res, next) {
+      res.header("Access-Control-Allow-Origin", "*");
+      res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+      );
+      next();
+    });
+
+    app.get("/api/ping", (req, res) => {
+      res.send({
+        msg: "Hello, World"
+      });
+    });
+    
+    // app.listen(port, () => debug(`Listening on port ${port}`));
+    // var cors = require('cors')
+    // var app = express()
+    
+    // app.use(cors())
+
+    // app.get('/products/:id', function (req, res, next) {
+    //   res.json({msg: 'This is CORS-enabled for all origins!'})
+    // })
      
-    app.listen(80, function () {
-      console.log('CORS-enabled web server listening on port 80')
-    })
+    // app.listen(80, function () {
+    //   console.log('CORS-enabled web server listening on port 80')
+    // })
+
+    // let allowCrossDomain = function(req, res, next) {
+    //   res.header('Access-Control-Allow-Origin', "*");
+    //   res.header('Access-Control-Allow-Headers', "*");
+    //   next();
+    // }
+    // app.use(allowCrossDomain);
 
     // app.use(function (req, res, next) {
 
