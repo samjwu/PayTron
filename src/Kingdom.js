@@ -123,7 +123,7 @@ class Kingdom extends Component {
         <div className="row">
           <div
             className="col-lg-12 territory"
-            style={{backgroundImage: `url('${app}/territories/${rulerTerritory.id}.jpg')`}}
+            style={{backgroundImage: `url('${app}/bg.jpg')`}}
           >
           { rulerAnimal && rulerAnimal.name ?
             <img className="rounded-circle" src={`${app}/animals/${rulerAnimal.id}.jpg`} alt={rulerAnimal.name} />
