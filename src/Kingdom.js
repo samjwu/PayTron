@@ -143,11 +143,11 @@ class Kingdom extends Component {
             }
             <p>
             {mine ? <Link className="btn btn-primary" to="/me" role="button">Edit my Profile Label</Link>
-            : <a
-              className='btn btn-primary'
-              href={`${window.location.origin}/user/${currentUsername}?add=${app}/user/${username}`}
-            >Support this User <script src="https://gateway.gear.mycelium.com/gear-widget-host.js"></script><iframe id='gear-widget' scrolling='no' src="https://gateway.gear.mycelium.com/w/b64cd9008847f9efdc4ca5247cfd6a3e95d3fe629ac42418c38923e445acc678" style="border: none; display: inline-block; height: 130px; width: 350px;"></iframe>
-            </a>
+            : <button><a href="" class="blockoPayBtn" data-toggle="modal" data-uid="4da97d1e3a8311ea"><img width="160" src="https://www.blockonomics.co/img/pay_with_bitcoin_medium.png"></img></a></button>
+            // <a
+            //   className='btn btn-primary'
+            //   href={`${window.location.origin}/user/${currentUsername}?add=${app}/user/${username}`}
+            // >Support this User</a>
             }
             </p>
             <div className="container">
