@@ -25,21 +25,21 @@ export const ANIMALS = [
 ]
 
 export const TERRITORIES = [
-  // {
-  //   id: 'forest',
-  //   name: 'Forest',
-  //   superpower: 'Trees!'
-  // },
-  // {
-  //   id: 'tundra',
-  //   name: 'Tundra',
-  //   superpower: 'Let it snow!'
-  // },
-  // {
-  //   id: 'desert',
-  //   name: 'Desert',
-  //   superpower: 'Sand man!'
-  // }
+  {
+    id: 'monalisa',
+    name: 'Mona Lisa',
+    superpower: 'By not Leonardo da Vinci'
+  },
+  {
+    id: 'lastsupper',
+    name: 'Last Supper',
+    superpower: 'Also not by da Vinci'
+  },
+  {
+    id: 'david',
+    name: 'David',
+    superpower: 'My self portrait'
+  }
 ]
 
 export const ME_FILENAME = 'me.json'
@@ -56,13 +56,5 @@ export const OTHER_KINGDOMS = [
   {
     app: 'http://localhost:3001',
     ruler: 'larz.id'
-  },
-  {
-    app: 'https://animalkingdoms.netlify.com',
-    ruler: 'meepers.id.blockstack'
-  },  
-  {
-      app: 'https://thirsty-jang-0c0a17.netlify.com',
-      ruler: 'ma1222042.id.blockstack'
   }
 ]

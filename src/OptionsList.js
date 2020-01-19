@@ -6,7 +6,7 @@ class OptionsList extends Component {
 
   render() {
     const type = this.props.type
-    const word = "Labels"
+    var word = "Labels"
     let options = ANIMALS
     if (type === 'territories') {
       options = TERRITORIES

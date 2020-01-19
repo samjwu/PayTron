@@ -93,5 +93,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "files": [
+    "./cors/_headers",
+    "./cors/_redirects"
+  ]
 }
